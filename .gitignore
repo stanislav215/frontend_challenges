@@ -7,7 +7,7 @@ bin2dec/node_modules
 bin2dec/coverage
 
 # production
-bin2dec/build
+# bin2dec/build
 
 # misc
 .DS_Store
