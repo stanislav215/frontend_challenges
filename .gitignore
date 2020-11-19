@@ -1,0 +1,18 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+bin2dec/node_modules
+
+# testing
+bin2dec/coverage
+
+# production
+bin2dec/build
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
