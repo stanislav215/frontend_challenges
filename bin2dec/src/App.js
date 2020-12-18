@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 
 function App()   {
   const [appState,setAppstate] = useState({
@@ -60,13 +59,13 @@ function App()   {
         <div className="App">
         <form>
           <div>
-            <input type="text" value={appState.decimal} placeholder="Decimal number" name="dec" onChange={decimalChangeHandler} />
+            <input autoComplete="off" type="text" value={appState.decimal} placeholder="Decimal number" name="dec" onChange={decimalChangeHandler} />
           </div>
         
           <div>
-            <input type="text" value={appState.binary}  placeholder="Binary number" name="dec" onChange={binaryChangeHandler} />
+            <input autoComplete="off" type="text" value={appState.binary}  placeholder="Binary number" name="dec" onChange={binaryChangeHandler} />
           </div>
-          <button onChange={handleButton}>Clear</button>
+          <button type="reset" onClick={handleButton}>Clear</button>
         </form>
       </div>
 

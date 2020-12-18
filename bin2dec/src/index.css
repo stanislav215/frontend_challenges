@@ -4,21 +4,22 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:  rgb(204, 121, 121);;
+  background-color:  rgb(204, 121, 121);
 }
 h1{
   color: whitesmoke;
-  margin-top: 100px;
+  margin-top: 10vh;
+  margin-bottom: 20px;
 }
 .App{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  left: 50px;
   background-color: rgb(204, 184, 184);
   -webkit-box-shadow: 5px 5px 23px -3px #000000; 
   box-shadow: 5px 5px 23px -3px #000000;
@@ -28,7 +29,6 @@ h1{
 }
 form{
   width: 200px;
-
 }
 
 form input[type=text] {
@@ -57,3 +57,4 @@ button{
   color: whitesmoke;
   font-style: oblique;
 }
+
