@@ -1,3 +1,3 @@
-# frontend_challanges
+# frontend_challenges
 
-Website for challanges is [here](https://sleepy-keller-0faf33.netlify.app/)
+Website for challenges is [here](https://sleepy-keller-0faf33.netlify.app/).
