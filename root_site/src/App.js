@@ -10,7 +10,7 @@ class App extends Component {
 
       <main>
         <div className="sites">
-          <Site img="./dec2bin.png" href="https://keen-mcnulty-85a198.netlify.app" />
+          <Site img="./dec2bin.png" href="https://loving-swanson-66f3e0.netlify.app" />
           <Site img="./coming-soon.png" href="#"/>
           <Site img="./coming-soon.png" href="#"/>
           <Site img="./coming-soon.png" href="#"/>
