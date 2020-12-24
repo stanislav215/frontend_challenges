@@ -1,5 +1,5 @@
 [build]
-  base = "bin2dec/"
+  base = "pass_generator/"
 
   publish = "/build"
 
