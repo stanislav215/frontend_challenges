@@ -3,6 +3,7 @@
 # dependencies
 bin2dec/node_modules
 root_site/node_modules
+pass_generator/node_modules
 
 # testing
 bin2dec/coverage
