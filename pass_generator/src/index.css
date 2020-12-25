@@ -6,7 +6,7 @@
 
 }
 body{
-  background-color: rgb(172, 84, 84);
+  background-color: rgb(121, 48, 116);
   color: aliceblue;
 
   display: flex;
@@ -15,7 +15,7 @@ body{
 
 }
 .container{
-  background-color: rgb(141, 42, 42);
+  background-color: rgb(75, 30, 72);
   width: 300px;
   height: 370px;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
@@ -25,7 +25,7 @@ body{
 #Password{
   font-size: 18px;
   padding-right: 35px;
-  background-color: rgb(199, 95, 95);
+  background-color: rgb(122, 99, 145);
   height: 40px;
   margin: 40px 20px 0px 20px;
   width: 260px;
@@ -64,15 +64,54 @@ input[type=checkbox]{
   right: -245px;
   height: 30px;
   width: 30px;
+  outline: none;
 }
 .generateButt{
   font-size: 18px;
   width: 260px;
   margin: 0 20px 0px 20px;
   height: 40px;
-
-  background-color: lightcoral;
+  color: aliceblue;
+  background-color: rgb(29, 11, 28);
   border-style: none;
+  outline:none;
+  cursor: pointer;
+}
+.generateButt:active{
+  transform: translateY(4px)
+}
+.generateButt:hover{
+  background-color: rgb(110, 62, 102);
+}
+
+
+.copied{
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.856);
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  visibility: hidden;
+}
+.copied span{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+  
+}
+.copied #smaller{
+  transform: translate(-50%, 200%);
+  font-size: 20px;
+}
+
+.copied[Animation="1"]{
+  animation: fadeInFromNone 1s ease-out;
 }
 
 @keyframes fadeInFromNone {
@@ -88,34 +127,6 @@ input[type=checkbox]{
       opacity: 0;
       visibility: hidden;
   }
-}
-.copied{
-  align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.856);
-  width: 200px;
-  height: 200px;
-  border-radius: 20px;
-  visibility: hidden;
-}
-.copied a{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 150px;
-  
-}
-.copied #smaller{
-  transform: translate(-50%, 200%);
-  font-size: 20px;
-}
-
-.copied[Animation="1"]{
-  animation: fadeInFromNone 1s ease-out;
 }
 
 

@@ -72,7 +72,7 @@ class App extends React.Component {
               name="GeneratedPass" 
               onChange={this.onInputChange}/>
     
-            <input type="image" id="copyBut" src={copy} onClick={this.onCopyClick.bind(this)} />
+            <input type="image" id="copyBut" src={copy} onClick={this.onCopyClick.bind(this)} alt="copy" />
           </div>
             <div id="checkboxes">
               <ul>
@@ -113,10 +113,10 @@ class App extends React.Component {
             <button className="generateButt" onClick={this.onGeneratePassword}>Generate password</button>
         </div>
         <div className="copied" 
-        onAnimationEnd={()=> this.setState({CopiedAnim:"0"})}
-        Animation={this.state.CopiedAnim}>
-          <a>✓</a>
-          <a id="smaller">Copied</a>
+         onAnimationEnd={()=> this.setState({CopiedAnim:"0"})}
+          animation={this.state.CopiedAnim}>
+          <span>✓</span>
+          <span id="smaller">Copied</span>
 
         </div>
       </div>
