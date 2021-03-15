@@ -1,5 +1,4 @@
 [build]
   base = "root_site/"
-
   publish = "/build"
 

@@ -7,15 +7,14 @@ class App extends Component {
     return (
       <div>
         <h1>Front end challanges</h1>
-
       <main>
         <div className="sites">
-          <Site img="./dec2bin.png" href="https://loving-swanson-66f3e0.netlify.app" />
-          <Site img="./passgen.png" href="https://musing-ptolemy-15169c.netlify.app/"/>
-          <Site img="./coming-soon.png" href="#"/>
-          <Site img="./coming-soon.png" href="#"/>
-          <Site img="./coming-soon.png" href="#"/>
-          <Site img="./coming-soon.png" href="#"/>
+          <Site img="./assets/dec2bin.png" href="https://loving-swanson-66f3e0.netlify.app" />
+          <Site img="./assets/passgen.png" href="https://musing-ptolemy-15169c.netlify.app/"/>
+          <Site img="./assets/burger.png" href="https://ecstatic-yalow-374264.netlify.app/"/>
+          <Site img="./assets/coming-soon.png" href="#"/>
+          <Site img="./assets/coming-soon.png" href="#"/>
+          <Site img="./assets/coming-soon.png" href="#"/>
         </div>
       </main>
       </div>
