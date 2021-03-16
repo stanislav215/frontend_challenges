@@ -1,0 +1,24 @@
+.BuildControls{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(153, 98, 68);
+    align-items: center;
+    height: 50vh;
+    user-select: none;
+    z-index: 100;
+}
+
+
+.OrderButt{
+    font: inherit;
+    padding: 12px;
+    margin-top: 10px;
+    /*margin: 20px 5px;*/
+    width: 200px;
+    background-color: rgb(240, 180, 140);
+    border:none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px;
+}

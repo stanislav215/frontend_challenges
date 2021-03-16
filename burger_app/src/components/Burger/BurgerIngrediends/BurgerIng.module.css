@@ -1,0 +1,62 @@
+
+.breadTop{
+    height: 50px;
+    width: 80%;
+    margin-bottom: 10px;
+    background: rgb(211, 163, 107);
+   
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 0 auto 2% auto;
+
+
+}
+
+.cheese{
+    margin-bottom: 5px;
+    background-color: rgb(219, 173, 20);
+    width: 85%;
+    height: 10px;
+    margin: 2% auto;
+
+
+}
+.meat{
+    margin-bottom: 10px;
+    background-color: rgb(54, 32, 2);
+    border-radius: 20px;
+    width: 90%;
+    height: 30px;
+    margin: 2% auto;
+
+
+}
+.salad{
+    margin-bottom: 10px;
+    background-color: rgb(67, 104, 75);
+    width: 95%;
+    height: 10px;
+    margin: 2% auto;
+
+}
+
+.bacon{
+    margin-bottom: 10px;
+    background-color: rgb(197, 75, 85);
+    width: 80%;
+    height: 5px;
+    border-radius: 50px;
+    margin: 2% auto;
+
+}
+
+.breadButton{
+    background-color: rgb(211, 163, 107);
+    width: 80%;
+    height: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 2% auto 0 auto;
+
+
+}

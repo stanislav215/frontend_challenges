@@ -1,0 +1,29 @@
+.CheckoutSummary { /*Mobile Layout*/
+    padding-top: 10vh;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-weight: bold;
+
+}
+.CheckoutSummary::-webkit-scrollbar{
+    display: none;
+}
+@media (min-width: 500px) and (min-height: 400px){ /* Devices in Potrait mode  */
+    .CheckoutSummary{
+        width: 600px;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 401px){ /* */
+    .CheckoutSummary{
+        width: 600px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px){ /*Desktop*/
+    .CheckoutSummary{
+        width: 600px;
+
+    }
+}
