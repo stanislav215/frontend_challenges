@@ -5,6 +5,9 @@ export default function Order(props) {
 
     const ingredients = []
 
+    let date = new Date(props.orderDate)
+    date = String([date.getUTCDate(),date.getMonth()+1,date.getFullYear()].join(".")) 
+
     for(let ingredientName in props.ingredients){
         ingredients.push({ 
             name:ingredientName, 
@@ -27,6 +30,7 @@ export default function Order(props) {
         <div className={classes.Order}>
             <p>Ingredients: {ingredinetOutput}</p>
             <p>Price: <strong>USD {props.totalPrice.toFixed(2)}</strong></p>
+            <p>{date}</p>
         </div>
     )
 }

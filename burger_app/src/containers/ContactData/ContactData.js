@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-import Button from "../../../components/UI/Button/Button"
+import Button from "../../components/UI/Button/Button"
 import classes from "./ContactData.module.css"
-import axios from "../../../axios-orders"
-import Spinner from "../../../components/UI/Spinner/Spinner"
-import Input from "../../../components/UI/Input/Input"
+import axios from "../../axios-orders"
+import Spinner from "../../components/UI/Spinner/Spinner"
+import Input from "../../components/UI/Input/Input"
+import { connect } from 'react-redux'
+import Modal from "../../components/UI/Modal/Modal"
+import "./ContactData.css"
+import * as actionTypes from "../../store/actions"
 
-export default class ContactData extends Component {
+class ContactData extends Component {
 
     state = {
         orderForm: {
@@ -96,8 +100,41 @@ export default class ContactData extends Component {
 
         },
         formIsvalid: false,
-        loading:true
+        loading:true,
+        showAllert:false,
     }
+
+    constructor(props){
+        super(props)
+        this.myRef = React.createRef()
+
+    }
+    componentDidMount(){
+        this.myRef.current.scrollIntoView()
+        const updatedOrderFormElements = {
+            ...this.state.orderForm
+        }
+
+        const updatedOrderFormElement = {
+            ...updatedOrderFormElements
+        }
+
+        this.setState({orderForm:updatedOrderFormElements,showAllert:true})
+    }
+
+    onCloseModalHandler = () => {
+        console.log("stano");
+        const updatedOrderFormElements = {
+            ...this.state.orderForm
+        }
+
+        const updatedOrderFormElement = {
+            ...updatedOrderFormElements
+        }
+
+        this.setState({orderForm:updatedOrderFormElements,showAllert:false})
+    }
+
 
     checkValidity(value, rules){
         let isValid = true
@@ -144,14 +181,16 @@ export default class ContactData extends Component {
         }
 
         const order = {
-            ingredients:this.props.ingredients,
-            price:this.props.totalPrice, // should be also calculated at backend
+            ingredients:this.props.ings,
+            orderDate: new Date(),
+            price:this.props.price, // should be also calculated at backend
             orderData: formData 
         }
         axios.post("/orders.json",order)
             .then(res => {
                 setTimeout(() => {
                     this.setState({loading:false})
+                    this.props.orderSentHandler()
                     this.props.history.push("/")
                 }, 1000);
             })
@@ -160,6 +199,30 @@ export default class ContactData extends Component {
                 this.setState({loading:false})
             })
     }
+    fillExampleHandler = () =>{
+        const formValues = {
+            name: "John",
+            email: "Even",
+            street: "Galactic",
+            zipCode: "04090",
+            country: "Belgium",
+            deliveryMethond: "Fastest"
+        }
+
+        const updatedOrderFormElements = {
+            ...this.state.orderForm
+        }
+        const updatedOrderFormElement = {}
+        for(let key in updatedOrderFormElements){
+            console.log(key);
+            updatedOrderFormElement[key] =  updatedOrderFormElements[key]
+            updatedOrderFormElement[key].value = formValues[key]
+               
+        }
+
+        this.setState({orderForm:updatedOrderFormElements,formIsvalid:true})
+    }
+
 
     render() {
         const formElementsArray = []
@@ -170,9 +233,8 @@ export default class ContactData extends Component {
             })
         }
 
-
         let form = this.state.loading ?
-            <form onSubmit={this.orderHandler}>
+            <form  onSubmit={this.orderHandler}>
                 {formElementsArray.map((formEl)=>{
                 return <Input 
                     invalid={!formEl.config.valid}
@@ -191,11 +253,31 @@ export default class ContactData extends Component {
             <Spinner/>
 
         return (
-            <div className={classes.ContactData}>
+            <div className="ContactData" ref={this.myRef} className={classes.ContactData}>
                 <h4>Enter your Contact Data</h4>
+                <button onClick={this.fillExampleHandler}>Fill by example</button>
+                <Modal show={this.state.showAllert} closeModal={this.onCloseModalHandler}>
+                    Please do not put personal information here!
+                </Modal>
                 {form}
                 
             </div>
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        ings:  state.ingredients,
+        price: state.totalPrice,
+    }
+}
+
+const mapDispatchtoProps = dispatch => {
+    return {
+        orderSentHandler: () => dispatch({type:actionTypes.ORDER_SENT}),
+
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchtoProps)(ContactData)
