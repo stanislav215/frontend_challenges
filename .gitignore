@@ -5,6 +5,7 @@ bin2dec/node_modules
 root_site/node_modules
 pass_generator/node_modules
 burger_app/node_modules
+calendar/node_modules
 
 # testing
 bin2dec/coverage

@@ -1,0 +1,19 @@
+.Day {
+  display:flex;
+    align-items: center;
+    justify-content:center;
+    color: aliceblue;
+    font-weight: bold;
+    margin:4px;
+    border-radius: 25px;
+
+  }
+
+  .Day:hover{
+      background-color:rgb(138, 73, 20);
+  }
+
+  .Day.Active{
+    background-color:rgb(138, 73, 20);
+  }
+  

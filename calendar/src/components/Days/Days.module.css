@@ -1,0 +1,10 @@
+.Days{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    color: whitesmoke;
+    grid-template-rows: 45px 45px 45px 45px 45px 45px;
+    text-align: center;
+}
+
+  

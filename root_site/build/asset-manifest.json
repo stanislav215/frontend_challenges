@@ -1,9 +1,10 @@
 {
   "main.css": "static/css/main.3a292e33.css",
   "main.css.map": "static/css/main.3a292e33.css.map",
-  "main.js": "static/js/main.0de3ad5a.js",
-  "main.js.map": "static/js/main.0de3ad5a.js.map",
+  "main.js": "static/js/main.3d340b6f.js",
+  "main.js.map": "static/js/main.3d340b6f.js.map",
   "static/media/burger.png": "static/media/burger.45134782.png",
+  "static/media/calendar.png": "static/media/calendar.c0e2dad5.png",
   "static/media/coming-soon.png": "static/media/coming-soon.c360c99a.png",
   "static/media/dec2bin.png": "static/media/dec2bin.c0ca0dd8.png",
   "static/media/passgen.png": "static/media/passgen.2ae964c2.png"
