@@ -9,7 +9,6 @@ function App()   {
     let num = e.target.value
     var regExp = /[a-zA-Z2-9]/g;
 
-    const a = "dsadsdsadsadsaadas"
     if(regExp.test(num)|| num ===""){
       setAppstate({
         binary: num,
